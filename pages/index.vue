@@ -12,9 +12,11 @@ const role = ref(user.value?.user_role)
 
 <template>
 <div>
-  <button v-if="isLoggedIn"></button>
+  <button v-if="isLoggedIn">
     <a href="/api/logout"> Logout </a>
-  <button v-if="!isLoggedIn"></button>
+  </button>
+  <button v-if="!isLoggedIn">
     <a href="/api/login"> Login </a>
+  </button>
 </div>
 </template>
