@@ -11,7 +11,6 @@ export default defineNuxtConfig({
     BASEURL: process.env.BASEURL || 'http://localhost:3000/',
     },
   compatibilityDate: '2024-04-03',
-  devtools: { enabled: true },
    router: {
     middleware: ['auth']
   } 
