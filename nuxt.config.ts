@@ -6,12 +6,16 @@ export default defineNuxtConfig({
       AUTH0_DOMAIN: process.env.NUXT_AUTH0_DOMAIN || '',
       AUTH0_CALLBACK_URL: process.env.NUXT_AUTH0_CALLBACK_URL || 'http://localhost:3000/api/callback',
       },
-    AUTH0_SECRET: process.env.NUXT_AUTH0_CLIENT_SECRET || '',
-    ISSUER: process.env.NUXT_AUTH0_ISSUER || '',
-    BASEURL: process.env.BASEURL || 'http://localhost:3000/',
+    private: {
+      OPENAI_API_Key: process.env.NUXT_OPENAI_API_KEY,
+      AUTH0_SECRET: process.env.NUXT_AUTH0_CLIENT_SECRET || ''
     },
+    ISSUER: process.env.NUXT_AUTH0_ISSUER || '',
+    BASEURL: process.env.BASEURL || 'http://localhost:3000/'
+    },
+    
   compatibilityDate: '2024-04-03',
    router: {
     middleware: ['auth']
-  } 
+  },
 })
