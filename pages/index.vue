@@ -18,5 +18,8 @@ const role = ref(user.value?.user_role)
   <button v-if="!isLoggedIn">
     <a href="/api/login"> Login </a>
   </button>
+  <button>
+    <NuxtLink to="/Water"> Water </NuxtLink>
+  </button>
 </div>
 </template>
